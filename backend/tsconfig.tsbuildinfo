@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/models/db.ts","./src/routes/root.ts","./src/routes/app/admin.ts","./src/routes/controllers/login.ts","./src/routes/controllers/signup.ts","./src/sockets/sockets.ts"],"version":"5.9.2"}
