@@ -20,7 +20,7 @@ function HoverCardTrigger({
 function HoverCardContent({
   className,
   align = "center",
-  sideOffset = 30,
+  sideOffset = 4,
   ...props
 }: React.ComponentProps<typeof HoverCardPrimitive.Content>) {
   return (

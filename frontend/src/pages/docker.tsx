@@ -17,10 +17,10 @@ export function Docker() {
         }
     }
     return(
-        <div className="fixed left-[43%] bottom-[1vw] z-10">
+        <div className="fixed left-[43%] bottom-[1vw]">
             <Dock className="">
                 <DockIcon>
-                    <HoverCard openDelay={1} closeDelay={100}>
+                    <HoverCard openDelay={100} closeDelay={100}>
                         <HoverCardTrigger>
                             <VscHome/>
                         </HoverCardTrigger>
@@ -33,7 +33,7 @@ export function Docker() {
                     </HoverCard>
                 </DockIcon>
                 <DockIcon>
-                    <HoverCard openDelay={1} closeDelay={100}>
+                    <HoverCard openDelay={100} closeDelay={100}>
                         <HoverCardTrigger>
                             <VscActivateBreakpoints onClick={themeHandler} />
                         </HoverCardTrigger>
@@ -46,11 +46,11 @@ export function Docker() {
                     </HoverCard>
                 </DockIcon>
                 <DockIcon>
-                    <HoverCard openDelay={1} closeDelay={100}>
+                    <HoverCard openDelay={100} closeDelay={100}>
                         <HoverCardTrigger>
                             <VscGithubAlt />
                         </HoverCardTrigger>
-                        <HoverCardContent className="mt-[10vw] rounded-2xl">
+                        <HoverCardContent className=" mt-[10vw] rounded-2xl">
                             <div className="flex flex-col">
                                 <p className="font-[400] text-[1vw]">Github</p>
                                 <p className="font-[300] text-[0.85vw]">Understand how I made this websocket app.</p>
@@ -59,7 +59,7 @@ export function Docker() {
                     </HoverCard>
                 </DockIcon>
                 <DockIcon>
-                    <HoverCard openDelay={1} closeDelay={100}>
+                    <HoverCard openDelay={100} closeDelay={100}>
                         <HoverCardTrigger>
                             <VscAccount />
                         </HoverCardTrigger>

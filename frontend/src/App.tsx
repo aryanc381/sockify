@@ -7,7 +7,7 @@ function App() {
     <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
       <BrowserRouter>
         <Routes>
-          <Route path='/chat' element={<Main />} />
+          <Route path='/' element={<Main />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
