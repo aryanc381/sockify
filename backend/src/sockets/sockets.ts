@@ -1,18 +1,24 @@
-import { WebSocketServer } from "ws";
+import WebSocket, { WebSocketServer } from "ws";
 
 const ws = new WebSocketServer({ port: 8080 });
 
-let clients = [];
+interface Users {
+    name?: string
+    socket: WebSocket;
+}
+
+let clients: Users[] = [];
 
 ws.on('connection', (socket) => {
     
     socket.send('User connected.');
-    clients.push(socket);
+    clients.push({ socket });
+    // console.log(socket);
 
     socket.on('message', (message) => {
         clients.forEach((client) => {
-            if(client !== socket && client.readyState === 1) {
-                client.send(message.toString());
+            if(client.socket !== socket && client.socket.readyState === WebSocket.OPEN) {
+                client.socket.send(message.toString());
             }
         });
     });
