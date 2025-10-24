@@ -13,7 +13,7 @@ function Main() {
       <div className="mt-[3vw] ml-[3vw] mr-[3vw]">
         
         <Navbar />
-        <div className="mt-[6vw]">
+        <div className="mt-[5vw]">
             <Header />
         </div>
         
@@ -32,11 +32,12 @@ export function Header() {
         <div className="w-[60vw]">
             <p className="tracking-[-0.15vw] text-[3vw]">A {" "}<span ><Highlighter action="underline" color="#FF9800" animationDuration={900}>real-time messaging platform</Highlighter> {" "}</span> with private chats and community rooms, keeping teams and communities connected seamlessly.</p>
             <MarqueeDemo />
+            <div className="text-[1.25vw] mt-[2vw] text-gray-500">
+              {/* <p></p>
+              <img src="./react.png" alt="react" className="mt-[1vw] w-[3vw]" />
+            */}</div> 
         </div>
     )
 }
-
-
-
 
 export default Main

@@ -1,0 +1,5 @@
+.frameI {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}

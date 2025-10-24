@@ -8,24 +8,33 @@ interface Users {
 }
 
 let clients: Users[] = [];
+let parsedMessage: any;
 
-ws.on('connection', (socket) => {
-    
-    socket.send('User connected.');
-    clients.push({ socket });
-    // console.log(socket);
+ws.on('connection', (socket) => {    
+    try {
+        socket.send('User connected.');
+        clients.push({ socket });
+        // console.log(socket);
 
-    socket.on('message', (message) => {
-        clients.forEach((client) => {
-            if(client.socket !== socket && client.socket.readyState === WebSocket.OPEN) {
-                client.socket.send(message.toString());
-            }
+        socket.on('message', (message) => {
+            parsedMessage = JSON.parse(message.toString());
+
+            console.log(parsedMessage.payload.msg);
+            clients.forEach((client) => {
+
+                if(client.socket !== socket && client.socket.readyState === WebSocket.OPEN) {
+                    client.socket.send(message.toString());
+                }
+            });
         });
-    });
 
-    socket.on('close', () => {
-        console.log('User disconnected.');
-    });
+        socket.on('close', () => {
+            console.log('User disconnected.');
+        });
+    } catch(err) {
+        console.log('Mai fatgaya!');
+    }
+    
 });
 
 

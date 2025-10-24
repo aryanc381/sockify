@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+.iframe-hide-scrollbar {
+  overflow: hidden;
+}
+
+/* Hide scrollbar on supported browsers */
+.iframe-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.iframe-hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}

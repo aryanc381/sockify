@@ -17,7 +17,7 @@ export function Docker() {
         }
     }
     return(
-        <div className="fixed left-[43%] bottom-[1vw]">
+        <div className="fixed left-[43%] bottom-[1vw] z-[2]">
             <Dock className="">
                 <DockIcon>
                     <HoverCard openDelay={100} closeDelay={100}>
