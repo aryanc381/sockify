@@ -3,7 +3,7 @@ function IPhone15() {
     <div className="relative w-[30vw] mx-auto scale-[1.10] mt-[2vw]">
       {/* iPhone 15 Screen */}
       <div
-        className="absolute bg-red-500 scale-[0.515] top-[-24%] left-[-12.3%] w-[87%] h-[122%] rounded-[3vw] overflow-hidden shadow-inner"
+        className="absolute bg-red-500 scale-[0.515] top-[-24%] left-[-12.3%] w-[87%] h-[122%] rounded-t-[0vw] rounded-[3vw] overflow-hidden shadow-inner"
         style={{
           backgroundColor: "black", // fallback while iframe loads
         }}
