@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 function Navbar() {
   return (
     <div className="flex">
-        <p className="cursor-[pointer] text-[1.5vw] mr-[2vw] mt-[0.1vw]">Sockify™</p>
+        <p className="cursor-[pointer] text-[1.5vw] mr-[2vw]">Sockify™</p>
         <div className="flex gap-[1vw]">
                 <Button variant={"secondary"} className="w-[6vw] rounded-[1vw] cursor-pointer">Signup</Button>
                 <Button className="w-[6vw] rounded-[1vw] cursor-pointer">Login</Button>

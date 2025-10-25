@@ -1,36 +1,34 @@
-function IPhone() {
+function IPhone15() {
   return (
-    <div className="relative w-[35vw] mx-auto">
-      {/* App screen inside phone */}
+    <div className="relative w-[30vw] mx-auto scale-[1.10] mt-[2vw]">
+      {/* iPhone 15 Screen */}
       <div
-        className="absolute top-[1.5%] left-[11%] w-[49.5%] h-[67%] rounded-[2vw] overflow-hidden bg-white shadow-inner"
+        className="absolute bg-red-500 scale-[0.515] top-[-24%] left-[-12.3%] w-[87%] h-[122%] rounded-[3vw] overflow-hidden shadow-inner"
+        style={{
+          backgroundColor: "black", // fallback while iframe loads
+        }}
       >
-        <div
-          className="w-full h-full overflow-hidden flex items-center justify-center"
-        >
-          <iframe
-            src="https://www.aryancodes.dev"
-            title="App Preview"
-            className="border-none"
-            style={{
-              width: "125%",       // make iframe slightly wider to fit scaled content
-              height: "125%",
-              transform: "scale(0.8)", // zoom out content
-              transformOrigin: "0 0",  // keep zoom anchored to top-left
-              border: "none",
-            }}
-          />
-        </div>
+        <iframe
+          src="https://kahaani.site"
+          title="App Preview"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            transform: "scale(1)",
+            transformOrigin: "center center",
+          }}
+        />
       </div>
 
-      {/* iPhone frame */}
+      {/* iPhone 15 Frame Image */}
       <img
-        src="./iphone.png"
-        alt="iPhone frame"
-        className="relative z-10 w-full pointer-events-none"
+        src="./iphone.png" // replace with your iPhone 15 frame image
+        alt="iPhone 15 Frame"
+        className="relative scale-[1] z-10 pointer-events-none select-none"
       />
     </div>
   );
 }
 
-export default IPhone;
+export default IPhone15;
