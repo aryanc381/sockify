@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
-mongoose.connect(`${process.env.MONGO_URL}`);
+//@ts-ignore
+mongoose.connect(process.env.MONGO_URL);
 //@ts-ignore
 const userSchema = mongoose.Schema({
     userDetails: {
@@ -12,6 +12,10 @@ const userSchema = mongoose.Schema({
             type: String
         },
         username: {
+            default: "",
+            type: String
+        },
+        password: {
             default: "",
             type: String
         },
@@ -24,4 +28,4 @@ const userSchema = mongoose.Schema({
 
 const users = mongoose.model('sockify-users', userSchema);
 
-module.exports = { users };
+export default users;
