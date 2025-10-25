@@ -4,13 +4,16 @@ import Main from './pages/main';
 import { ThemeProvider } from './components/ui/theme-provider';
 function App() {
   return (
-    <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Main />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+    <div>
+      <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Main />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    </div>
+    
     
   )
 }
